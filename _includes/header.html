@@ -1,14 +1,43 @@
-<header class="site-header">
+<div class="header">
 
-  <div id="header">
-    <nav>
-      <ul>
-        <li class="fork"><a href="{{site.baseurl}}/">Home</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/compsci">CompSci</a></li>
-        <li class="fork"><a href="{{site.baseurl}}/blogs">Blogs</a></li>
-        <li class="title"><a href="{{site.baseurl}}/help">Help</a></li>
-        <li class="title"><a href="{{ site.github.repository_url }}#readme">View On GitHub</a></li>
-      </ul>
-    </nav>
-  </div><!-- end header -->
-</header>
+  <a class="btn btn-primary" href="{{ site.baseurl }}/" role="button">
+    <img class="logo" src="https://i.ibb.co/xFHYYwz/Untitled-drawing.png" alt="uh oh" width="75px" height="75px">
+  </a>
+  <a class="btn btn-primary header-button" href="{{ site.baseurl }}/" role="button">Home</a>
+  <a class="btn btn-primary header-button" href="{{ site.baseurl }}/schedule" role="button">Schedule</a>
+  <a class="btn btn-primary header-button" href="{{ site.baseurl }}/about" role="button">About me</a>
+  <a class="btn btn-primary header-button" href="{{ site.github.repository_url }}" role="button">GitHub</a>
+</div><!-- end header -->
+
+<style>
+  .logo {
+    size: 100%;
+    transition: size 2s;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #e8e4e3;
+  }
+
+  .logo:hover {
+    size: 150%;
+  }
+
+  .header-button {
+    box-shadow: 0px 0px 20px #e8e4e3;
+    border-radius: 10px;
+    padding: 10px 40px 10px 40px;
+  }
+
+  .header {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    box-shadow: 0px 0px 20px #e8e4e3;
+    background: white;
+    border-radius: 25px;
+    position: relative;
+    justify-content: space-evenly;
+    z-index: 10;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+</style>
