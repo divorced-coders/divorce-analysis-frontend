@@ -3,5 +3,6 @@ layout: index
 title: Student Blog
 ---
 
-# Hi, I'm Rohin 👋
-View my [projects](https://github.com/rohinsood) and [personal website](https://rohinsood.dev)
+# Welcome to our project! 👋
+
+Here, we have made a stock predictive analysis project in which we use the Fibonacci sequence in order to create an overall prediction of the trend in each stock. 
