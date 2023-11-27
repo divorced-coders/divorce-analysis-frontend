@@ -1,7 +1,7 @@
 ---
 layout: schedule
 title: Schedule
-units: "1,2,3,4,5,6,7,8,9"
+units: "1,2,3"
 course: csa
 permalink: schedule
 ---

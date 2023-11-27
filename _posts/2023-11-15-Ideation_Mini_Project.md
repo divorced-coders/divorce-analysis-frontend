@@ -2,9 +2,9 @@
 toc: true
 comments: true
 layout: post
-title: Mini-Project Ideation
+title: Ideation (Week 0)
 type: plans
-courses: { csa: {week: 13} }
+courses: { csa: {week: 0} }
 ---
 
 # Using the Fibonacci Sequence for Stock Price Analysis
