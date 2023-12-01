@@ -1,6 +1,7 @@
 ---
 layout: post
 title: test
+permalink: /test
 ---
 
 <!DOCTYPE html>
