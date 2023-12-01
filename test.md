@@ -55,7 +55,30 @@ title: test
             const threeMonthsAgoString = formatDate(threeMonthsAgo);
             const sixMonthsAgoString = formatDate(sixMonthsAgo);
             const oneYearAgoString = formatDate(oneYearAgo);
-            
+            // API endpoint
+            const apiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${stockSymbol}&apikey=${apiKey}&outputsize=full`;
+            // Fetch data from the API
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const timeSeries = data['Time Series (Daily)'];
+                    const currentPrice = parseFloat(timeSeries[currentDateString]['4. close']);
+                    const threeMonthsAgoPrice = parseFloat(timeSeries[threeMonthsAgoString]['4. close']);
+                    const sixMonthsAgoPrice = parseFloat(timeSeries[sixMonthsAgoString]['4. close']);
+                    const oneYearAgoPrice = parseFloat(timeSeries[oneYearAgoString]['4. close']);
+                    // Display the results
+                    resultDiv.innerHTML = `
+                        <p>Current Price of ${stockSymbol}: $${currentPrice.toFixed(2)}</p>
+                        <p>Price 3 Months Ago: $${threeMonthsAgoPrice.toFixed(2)}</p>
+                        <p>Price 6 Months Ago: $${sixMonthsAgoPrice.toFixed(2)}</p>
+                        <p>Price 1 Year Ago: $${oneYearAgoPrice.toFixed(2)}</p>
+                    `;
+                })
+                .catch(error => {
+                    resultDiv.innerHTML = '<p>Error fetching stock data. Please try again later.</p>';
+                    console.error(error);
+                });
+        }
     </script>
 </body>
 </html>
