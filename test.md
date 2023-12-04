@@ -35,7 +35,7 @@ permalink: /test
     <div id="result"></div>
     <script>
         function getStockData() {
-            const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+            const apiKey = 'sdnf2030fio29r2002f0f032fwecj'; // Replace with your actual API key
             const stockSymbol = document.getElementById('stockSymbol').value.toUpperCase();
             const resultDiv = document.getElementById('result');
             if (stockSymbol === '') {
