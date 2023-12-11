@@ -10,7 +10,6 @@
     <div class="body-wrapper">
       <div class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}
-          • {% include read_time.html -%}
         </h1>
 
         <p class="post-meta post-meta-title">
@@ -80,5 +79,11 @@
 <style>
   .body-wrapper {
     margin-top: 25px;
+  }
+  h1 {
+    text-align: center;
+  }
+  p.post-meta.post-meta-title{
+    text-align: center;
   }
 </style>
