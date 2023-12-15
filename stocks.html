@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using the Fibonacci Sequence for Stock Price Analysis</title>
+  <link rel="stylesheet" href="stocks.css">
+</head>
+<body>
+
+  <div id="header">
+    <h1>Using the Fibonacci Sequence for Stock Price Analysis</h1>
+  </div>
+
+  <div id="monthButtons">
+    <!-- Buttons for each month will be dynamically generated here -->
+  </div>
+
+  <div class="dropdown" id="typeDropdown">
+    <button class="dropbtn">Order</button>
+    <div class="dropdown-content">
+      <!-- Dropdown buttons will be dynamically generated here -->
+    </div>
+  </div>
+
+  <!-- Canvas element for the graph -->
+  <div id="canvasContainer">
+    <canvas id="myCanvas"></canvas>
+  </div>
+
+  <div class="prediction-wrapper" style="display:none">
+    <!-- Input for user to enter a date for prediction -->
+    <label for="predictionInput">Enter a Month to Predict your Selected Stock Price (YYYY-MM): </label>
+    <input type="text" id="predictionInput" placeholder="e.g. 2023-09">
+    <button onclick="predictPrice()">Predict Price</button>
+    <!-- Display the prediction result -->
+    <h1 id="prediction"></h1>
+  </div>
+
+  <script src="stocks.js"></script>
+
+<html>
